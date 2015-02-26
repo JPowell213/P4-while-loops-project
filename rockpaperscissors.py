@@ -7,7 +7,7 @@ import tkinter.messagebox as messagebox
 
 #Create Variables
 winner = 0
-computerChoice = 0
+compchoice = 0
 player = 0
 rock = 0
 paper = 0
@@ -31,13 +31,14 @@ else:
     messagebox.showinfo("Try again","That's not a choice please choose, rock, paper, or scissors"
 #computer choice
 
-random.randint(1,3)
-                        
-if computerChoice == 1:
+compchoice = randint(1,3)
+                
+    
+if compchoice == 1: 
     rock += 1
-elif computerChoice == 2:
+elif compchoice == 2:
     scissors += 1
-elif computerChoice == 3:
+elif compchoice == 3:
     paper += 1
 
 
