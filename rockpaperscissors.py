@@ -9,6 +9,7 @@ import tkinter.messagebox as messagebox
 winner = 0
 compchoice = 0
 player = 0
+userchoice = 0
 rock = 0
 paper = 0
 scissors = 0
@@ -22,26 +23,43 @@ messagebox.showinfo("Welcome","Welcome, your about to play my Rock Paper Scissor
  #ask player what they want to play as
 player = simpledialog.askstring("player's choice","What do you want to play as? Rock, Paper or scissors.")
 if player == "rock":
-    player += 1
+    userchoice == "rock"
 elif player == "scissors":
-    player += 1
+    userchoice == "scissors"
 elif player == "paper":
-    player += 1
+    userchoice == "paper"
 else:
-    messagebox.showinfo("Try again","That's not a choice please choose, rock, paper, or scissors"
+    messagebox.showinfo("Try again","That's not a choice please choose, rock, paper, or scissors")
 #computer choice
 
-compchoice = randint(1,3)
-                
-    
-if compchoice == 1: 
-    rock += 1
-elif compchoice == 2:
-    scissors += 1
-elif compchoice == 3:
-    paper += 1
+compchoice = random.choice(("rock","paper","scissors"))
 
+messagebox.showinfo("user" "The computer chose {}".format(compchoice))
+messagebox.showinfo("user" "the user chose {}".format(userchoice))
+#The works                        
+if compchoice == "rock":
+    if userchoice == "paper":
+        winner = "user"
+    elif userchoice == "scissors":
+        winner = "computer"
+    else:
+        winner = None
 
+if compchoice == "paper":
+    if userchoice == "rock":
+        winner = "computer"
+    elif userchoice "scissors":
+          winner = "user"
+    else:
+        winner = None
+
+if compchoice == "scissors":
+    if userchoice == "rock"
+        winner = "user"
+    elif userchoice == "paper":
+        winner = "computer"
+    else:
+        winner = None
 
 
 
